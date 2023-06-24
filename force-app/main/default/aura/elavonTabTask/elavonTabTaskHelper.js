@@ -1,0 +1,3 @@
+({
+  getExistingRecords: function (component, helper) {}
+});

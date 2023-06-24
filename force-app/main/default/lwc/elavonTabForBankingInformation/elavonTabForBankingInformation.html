@@ -1,0 +1,40 @@
+<template>
+  <lightning-tabset active-tab-value={activeTab}>
+    <lightning-tab label="Deposit" value="Deposit" onactive={tabChangeHandler}
+      ><lightning-record-form
+        object-api-name="Banking_Information__c"
+        fields={fields}
+        onsuccess={handleSuccess}
+        record-type-id={recordTypeId}
+        record-id={depositRecordId}
+      >
+      </lightning-record-form
+    ></lightning-tab>
+    <lightning-tab
+      label="Charge Back"
+      value="Charge Back"
+      onactive={tabChangeHandler}
+      ><lightning-record-form
+        object-api-name="Banking_Information__c"
+        fields={fields}
+        onsuccess={handleSuccess}
+        record-type-id={recordTypeId}
+        record-id={chargebackRecordId}
+      >
+      </lightning-record-form
+    ></lightning-tab>
+    <lightning-tab
+      label="Loan Account"
+      value="Loan Account"
+      onactive={tabChangeHandler}
+      ><lightning-record-form
+        object-api-name="Banking_Information__c"
+        fields={fields}
+        onsuccess={handleSuccess}
+        record-type-id={recordTypeId}
+        record-id={loanRecordId}
+      >
+      </lightning-record-form
+    ></lightning-tab>
+  </lightning-tabset>
+</template>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zone__c</fullName>
+    <externalId>false</externalId>
+    <label>Zone</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>danger</fullName>
+                <default>false</default>
+                <label>danger</label>
+            </value>
+            <value>
+                <fullName>safe</fullName>
+                <default>false</default>
+                <label>safe</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
