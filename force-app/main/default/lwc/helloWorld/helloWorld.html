@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Two Way Data Binding">
+        <!-- <div>Hello World, This is {fullName}.</div> -->
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" label="Enter Title" onkeyup={changeHandler}></lightning-input>
+            <div class="slds-var-m-around_medium">This is {fullName} and I'm a {title}</div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="@track properties">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" label="Enter City" onkeyup={trackHandler}></lightning-input>
+            <div class="slds-var-m-around_medium">{address.city} is the city name.</div>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="without @track properties - recommended way">
+        <div class="slds-var-m-around_medium">
+            <!-- use SPREAD operator instead of using track -->
+            <lightning-input type="text" label="Enter City" onkeyup={useSpreadOperator}></lightning-input>
+            <div class="slds-var-m-around_medium">{address2.city} is the city name.</div>
+        </div>
+    </lightning-card>
+
+        <lightning-card title="Getters Demo">
+        <div class="slds-var-m-around_medium">
+            <!-- below is not allowed in LWC to overcome this we use getters 
+            {users[0]} 
+            {num1 * num2} -->
+            <div>First User is: {firstUser}</div>
+            <div>Multiply Numbers is: {multiplyNumbers}</div>
+        </div>
+    </lightning-card>
+</template>

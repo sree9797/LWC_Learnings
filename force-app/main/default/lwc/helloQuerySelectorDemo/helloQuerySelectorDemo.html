@@ -1,0 +1,13 @@
+<template>
+  <lightning-card title="Child Component">
+    <h1>This is h1 heading</h1>
+    <template for:each={userNames} for:item="user">
+      <div class="username" key={user}>{user}</div>
+    </template>
+    <div class="child"></div>
+    <lightning-button
+      onclick={fetchDetails}
+      label="Fetch Details"
+    ></lightning-button>
+  </lightning-card>
+</template>

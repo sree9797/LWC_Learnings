@@ -1,0 +1,39 @@
+<template>
+
+    <lightning-card title="for:each loop">
+        <div class="slds-var-m-around_medium">
+            <template for:each={carList} for:item="car">
+                <ul key={car} class="slds-has-dividers_around-space">
+                    <li class="slds-item">{car}</li>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="for:each loop with array of objects">
+        <div class="slds-var-m-around_medium">
+            <template for:each={contactList} for:item="con">
+                <ul key={con.Id} class="slds-has-dividers_around-space">
+                    <li class="slds-item">{con.Name},{con.Title}</li>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+
+    <lightning-card title="iterator loop">
+        <div class="slds-var-m-around_medium">
+            <template iterator:con={contactList}>
+                <ul key={con.value.Id} class="slds-has-dividers_around-space">
+                    <template if:true={con.first}>
+                        <div class="slds-var-m-around_small"> <strong>--Starts--</strong></div>
+                    </template>
+                    <li class="slds-item"><strong>{con.value.Name}</strong>, {con.value.Title}</li>
+                    <template if:true={con.last}>
+                        <div class="slds-var-m-around_small"> <strong>--Ends--</strong></div>
+                    </template>
+                </ul>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>
