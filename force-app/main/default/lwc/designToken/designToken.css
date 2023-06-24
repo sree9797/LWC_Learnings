@@ -1,0 +1,4 @@
+h1{
+    color: var(--lwc-brandAccessible);
+    background: var(--lwc-brandPrimaryTransparent);
+}

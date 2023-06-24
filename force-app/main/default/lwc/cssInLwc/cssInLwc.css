@@ -1,0 +1,12 @@
+.user{
+    color: royalblue;
+    font-size: large;
+}
+p{
+    color: aqua;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.user:hover{
+    color: red;
+    font-size: larger;
+}
